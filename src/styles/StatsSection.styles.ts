@@ -221,14 +221,13 @@ export const StatValue = styled.div`
   position: relative;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
   line-height: 1;
   padding-top: 1rem;
   
   &::after {
     content: '';
     position: absolute;
-    top: 0;
+    bottom: -12px;
     left: 0;
     width: 60px;
     height: 3px;
