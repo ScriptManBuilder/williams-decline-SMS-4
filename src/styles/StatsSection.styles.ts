@@ -127,6 +127,9 @@ export const StatCard = styled.div<{ $background: string }>`
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
 
   &::before {
     content: '';
@@ -207,20 +210,25 @@ export const StatDescription = styled.p`
   margin-top: 0.5rem;
   opacity: 0.7;
   line-height: 1.6;
+  flex: 1;
 `;
 
 export const StatValue = styled.div`
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   font-weight: 700;
-  margin-top: 1rem;
+  margin-top: auto;
   letter-spacing: -0.02em;
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  line-height: 1;
+  padding-top: 1rem;
   
   &::after {
     content: '';
     position: absolute;
-    bottom: -8px;
+    top: 0;
     left: 0;
     width: 60px;
     height: 3px;
@@ -234,22 +242,22 @@ export const StatValue = styled.div`
   }
 
   @media (max-width: 1024px) {
-    font-size: 2.75rem;
+    font-size: 3.5rem;
   }
 
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   @media (max-width: 425px) {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
 
   @media (max-width: 375px) {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   @media (max-width: 320px) {
-    font-size: 1.85rem;
+    font-size: 2rem;
   }
 `;
