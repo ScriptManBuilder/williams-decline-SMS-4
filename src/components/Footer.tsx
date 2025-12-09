@@ -14,11 +14,13 @@ import {
   ContactItem,
   ContactLabel,
   ContactValue,
-  FooterBottom
+  FooterBottom,
+  PaymentLogos,
+  PaymentLogo
 } from '../styles/Footer.styles';
 
 const Footer: React.FC = () => {
-  const brandName = process.env.REACT_APP_BRAND_NAME || 'Keltrova';
+  const brandName = process.env.REACT_APP_BRAND_NAME || 'Revylant';
   const companyName = process.env.REACT_APP_COMPANY_NAME || 'The Williams Collection Inc.';
   const companyAddress = process.env.REACT_APP_COMPANY_ADDRESS || 'E 2ND ST 5830 Casper WY US 82609';
   const companyPhone = process.env.REACT_APP_PHONE_DISPLAY || '+1 517-258-3818';
@@ -44,8 +46,8 @@ const Footer: React.FC = () => {
           <FooterSection>
             <FooterLogo>
               <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
-                <path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/>
+                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.3"/>
               </svg>
               {brandName}
             </FooterLogo>
@@ -54,6 +56,14 @@ const Footer: React.FC = () => {
               <p>{companyAddress}</p>
               <p>Established March 2023</p>
             </CompanyInfo>
+            <PaymentLogos>
+              <PaymentLogo>
+                <img src="/visa.svg" alt="Visa" />
+              </PaymentLogo>
+              <PaymentLogo>
+                <img src="/mastercard.svg" alt="Mastercard" />
+              </PaymentLogo>
+            </PaymentLogos>
           </FooterSection>
 
           <FooterSection>

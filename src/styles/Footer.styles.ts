@@ -268,10 +268,7 @@ export const ContactValue = styled.a`
   gap: 0.5rem;
   font-weight: 500;
   transition: all 0.2s ease;
-  word-break: keep-all;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-break: break-all;
 
   svg {
     width: 15px;
@@ -306,5 +303,39 @@ export const FooterBottom = styled.div`
       color: #5a6c7d;
       margin-top: 0.75rem;
     }
+  }
+`;
+
+export const PaymentLogos = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  
+  @media (max-width: 640px) {
+    justify-content: flex-start;
+  }
+`;
+
+export const PaymentLogo = styled.div`
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  @media (max-width: 425px) {
+    width: 44px;
+    height: 44px;
+    padding: 6px;
   }
 `;
