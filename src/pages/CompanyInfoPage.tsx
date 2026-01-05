@@ -40,17 +40,20 @@ const CompanyInfoPage: React.FC = () => {
           <LegalSection>
             <LegalSectionTitle>Company Details</LegalSectionTitle>
             <LegalParagraph style={{ fontWeight: 600 }}>
-              Legal Business Name:
+              Legal Business Name:     {process.env.REACT_APP_COMPANY_NAME}
             </LegalParagraph>
-            <LegalParagraph>
-              {process.env.REACT_APP_COMPANY_NAME}
-            </LegalParagraph>
-            <LegalParagraph style={{ fontWeight: 600, marginTop: '1rem' }}>
+            {/* <LegalParagraph>
+          
+            </LegalParagraph> */}
+            {/* <LegalParagraph style={{ fontWeight: 600, marginTop: '1rem' }}>
               Business Address:
-            </LegalParagraph>
-            <LegalParagraph>
-              {process.env.REACT_APP_COMPANY_ADDRESS}
-            </LegalParagraph>
+            </LegalParagraph> */}
+            <div style={{ marginTop: '1rem', marginBottom: '1rem' }}>
+              <img 
+                src="/company_adress.png" 
+                style={{ maxWidth: '100%', height: 'auto', display: 'block' }}
+              />
+            </div>
             <LegalParagraph style={{ fontWeight: 600, marginTop: '1rem' }}>
               Contact Information:
             </LegalParagraph>
@@ -110,7 +113,7 @@ const CompanyInfoPage: React.FC = () => {
             </LegalParagraph>
             <LegalList>
               <LegalListItem>
-                <strong>Billing Descriptor:</strong> "WILLIAMS COLLECTION" or "{process.env.REACT_APP_COMPANY_NAME}"
+                <strong>Billing Descriptor:</strong> "WMC" or "{process.env.REACT_APP_COMPANY_NAME}"
               </LegalListItem>
               <LegalListItem>
                 <strong>Billing Contact:</strong> {process.env.REACT_APP_PHONE_DISPLAY} will appear for billing inquiries
@@ -120,8 +123,7 @@ const CompanyInfoPage: React.FC = () => {
               </LegalListItem>
             </LegalList>
             <LegalParagraph style={{ marginTop: '1rem' }}>
-              For billing questions or to update payment methods, contact our accounts team at {process.env.REACT_APP_EMAIL_SUPPORT} 
-              or call {process.env.REACT_APP_PHONE_DISPLAY}.
+              For billing questions or to update payment methods, contact our accounts team at {process.env.REACT_APP_EMAIL_SUPPORT}               or call {process.env.REACT_APP_PHONE_DISPLAY}.
             </LegalParagraph>
           </LegalSection>
 
@@ -277,15 +279,18 @@ const CompanyInfoPage: React.FC = () => {
             <LegalParagraph>
               For platform demos, sales inquiries, or merchant support:
             </LegalParagraph>
-            <LegalParagraph style={{ fontWeight: 600, marginTop: '1rem' }}>
+            {/* <LegalParagraph style={{ fontWeight: 600, marginTop: '1rem' }}>
               {process.env.REACT_APP_COMPANY_NAME}
-            </LegalParagraph>
+            </LegalParagraph> */}
             <LegalParagraph style={{ fontWeight: 600 }}>
               Merchant Services & Sales
             </LegalParagraph>
-            <LegalParagraph style={{ fontWeight: 600 }}>
-              {process.env.REACT_APP_COMPANY_ADDRESS}
-            </LegalParagraph>
+            <div style={{ marginTop: '1rem', marginBottom: '1rem' }}>
+              <img 
+                src="/company_adress.png" 
+                style={{ maxWidth: '100%', height: 'auto', display: 'block' }}
+              />
+            </div>
             <LegalParagraph style={{ fontWeight: 600 }}>
               Sales Email: {process.env.REACT_APP_EMAIL_SUPPORT}
             </LegalParagraph>

@@ -31,17 +31,20 @@ const MerchantDisclosurePage: React.FC = () => {
               SaaS industry standards, payment processor requirements, and business service regulations.
             </LegalParagraph>
             <LegalParagraph style={{ fontWeight: 600, marginTop: '1.5rem' }}>
-              Legal Business Name:
+              Legal Business Name:      {process.env.REACT_APP_COMPANY_NAME}
             </LegalParagraph>
-            <LegalParagraph>
-              {process.env.REACT_APP_COMPANY_NAME}
-            </LegalParagraph>
-            <LegalParagraph style={{ fontWeight: 600, marginTop: '1rem' }}>
+            {/* <LegalParagraph>
+         
+            </LegalParagraph> */}
+            {/* <LegalParagraph style={{ fontWeight: 600, marginTop: '1rem' }}>
               Business Address:
-            </LegalParagraph>
-            <LegalParagraph>
-              {process.env.REACT_APP_COMPANY_ADDRESS}
-            </LegalParagraph>
+            </LegalParagraph> */}
+            <div style={{ marginTop: '1rem', marginBottom: '1rem' }}>
+              <img 
+                src="/company_adress.png" 
+                style={{ maxWidth: '100%', height: 'auto', display: 'block' }}
+              />
+            </div>
             <LegalParagraph style={{ fontWeight: 600, marginTop: '1rem' }}>
               Contact Information:
             </LegalParagraph>
@@ -102,7 +105,7 @@ const MerchantDisclosurePage: React.FC = () => {
             </LegalParagraph>
             <LegalList>
               <LegalListItem>
-                <strong>Billing Descriptor:</strong> "WILLIAMS COLLECTION" or similar variation
+                <strong>Billing Descriptor:</strong> "WC" or similar variation
               </LegalListItem>
               <LegalListItem>
                 <strong>Contact Phone:</strong> {process.env.REACT_APP_PHONE_DISPLAY} will appear on your statement for questions
@@ -284,8 +287,7 @@ const MerchantDisclosurePage: React.FC = () => {
             </LegalParagraph>
             <LegalList>
               <LegalListItem>
-                <strong>Step 1 - Contact Billing Support:</strong> Email our billing team at {process.env.REACT_APP_EMAIL_SUPPORT} 
-                or call {process.env.REACT_APP_PHONE_DISPLAY} with invoice details and dispute reason
+                <strong>Step 1 - Contact Billing Support:</strong> Email our billing team at {process.env.REACT_APP_EMAIL_SUPPORT}                 or call {process.env.REACT_APP_PHONE_DISPLAY} with invoice details and dispute reason
               </LegalListItem>
               <LegalListItem>
                 <strong>Step 2 - Investigation:</strong> Our billing team will review transaction logs, API usage, and invoice calculations within 5-7 business days
@@ -431,15 +433,18 @@ const MerchantDisclosurePage: React.FC = () => {
             <LegalParagraph>
               For any questions about this Merchant Disclosure or our payment processing services:
             </LegalParagraph>
-            <LegalParagraph style={{ fontWeight: 600, marginTop: '1rem' }}>
+            {/* <LegalParagraph style={{ fontWeight: 600, marginTop: '1rem' }}>
               {process.env.REACT_APP_COMPANY_NAME}
-            </LegalParagraph>
+            </LegalParagraph> */}
             <LegalParagraph style={{ fontWeight: 600 }}>
               Attention: Merchant Support Team
             </LegalParagraph>
-            <LegalParagraph style={{ fontWeight: 600 }}>
-              {process.env.REACT_APP_COMPANY_ADDRESS}
-            </LegalParagraph>
+            <div style={{ marginTop: '1rem', marginBottom: '1rem' }}>
+              <img 
+                src="/company_adress.png" 
+                style={{ maxWidth: '100%', height: 'auto', display: 'block' }}
+              />
+            </div>
             <LegalParagraph style={{ fontWeight: 600 }}>
               Email: {process.env.REACT_APP_EMAIL_SUPPORT}
             </LegalParagraph>

@@ -340,15 +340,18 @@ const DigitalProductsPage: React.FC = () => {
             <LegalParagraph>
               For questions about platform services, API integration, or this policy, contact:
             </LegalParagraph>
-            <LegalParagraph style={{ fontWeight: 600, marginTop: '1rem' }}>
+            {/* <LegalParagraph style={{ fontWeight: 600, marginTop: '1rem' }}>
               {process.env.REACT_APP_COMPANY_NAME}
-            </LegalParagraph>
+            </LegalParagraph> */}
             <LegalParagraph style={{ fontWeight: 600 }}>
               Merchant Support Team
             </LegalParagraph>
-            <LegalParagraph style={{ fontWeight: 600 }}>
-              {process.env.REACT_APP_COMPANY_ADDRESS}
-            </LegalParagraph>
+            <div style={{ marginTop: '1rem', marginBottom: '1rem' }}>
+              <img 
+                src="/company_adress.png" 
+                style={{ maxWidth: '100%', height: 'auto', display: 'block' }}
+              />
+            </div>
             <LegalParagraph style={{ fontWeight: 600 }}>
               Email: {process.env.REACT_APP_EMAIL_SUPPORT}
             </LegalParagraph>
